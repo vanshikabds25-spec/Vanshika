@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Scholarship / Seminar Registration Form</title>
+</head>
+
+<body>
+
+<h2>Scholarship / Seminar Registration Form</h2>
+
+<form>
+
+<!-- Personal Information -->
+<fieldset>
+<legend>Personal Information</legend>
+
+<label for="name">Full Name:</label><br>
+<input type="text" id="name" name="name" required><br><br>
+
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email" required><br><br>
+
+<label for="phone">Phone Number:</label><br>
+<input type="tel" id="phone" name="phone" required><br><br>
+
+<label for="dob">Date of Birth:</label><br>
+<input type="date" id="dob" name="dob"><br><br>
+
+</fieldset>
+
+<br>
+
+<!-- Gender Selection -->
+<fieldset>
+<legend>Gender</legend>
+
+<input type="radio" id="male" name="gender" value="Male" required>
+<label for="male">Male</label><br>
+
+<input type="radio" id="female" name="gender" value="Female">
+<label for="female">Female</label><br>
+
+<input type="radio" id="other" name="gender" value="Other">
+<label for="other">Other</label>
+
+</fieldset>
+
+<br>
+
+<!-- Course Selection -->
+<fieldset>
+<legend>Course / Seminar Selection</legend>
+
+<label for="course">Select Course:</label><br>
+<select id="course" name="course" required>
+<option value="">--Select Course--</option>
+<option value="web">Web Development</option>
+<option value="ai">Artificial Intelligence</option>
+<option value="data">Data Science</option>
+<option value="cyber">Cyber Security</option>
+<option value="cloud">Cloud Computing</option>
+</select>
+
+</fieldset>
+
+<br>
+
+<!-- Preferred Topics -->
+<fieldset>
+<legend>Preferred Topics</legend>
+
+<input type="checkbox" id="html" name="topics" value="HTML">
+<label for="html">HTML</label><br>
+
+<input type="checkbox" id="css" name="topics" value="CSS">
+<label for="css">CSS</label><br>
+
+<input type="checkbox" id="javascript" name="topics" value="JavaScript">
+<label for="javascript">JavaScript</label><br>
+
+<input type="checkbox" id="python" name="topics" value="Python">
+<label for="python">Python</label>
+
+</fieldset>
+
+<br>
+
+<!-- Special Requirements -->
+<fieldset>
+<legend>Special Requirements</legend>
+
+<input type="checkbox" id="hostel" name="requirement" value="Hostel">
+<label for="hostel">Need Hostel</label><br>
+
+<input type="checkbox" id="meal" name="requirement" value="Meal">
+<label for="meal">Meal Preference</label><br>
+
+<input type="checkbox" id="transport" name="requirement" value="Transport">
+<label for="transport">Transport Facility</label>
+
+</fieldset>
+
+<br>
+
+<!-- Submit -->
+<input type="submit" value="Register">
+<input type="reset" value="Reset">
+
+</form>
+
+</body>
+</html>
