@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frames / iFrame Demo</title>
+
+<style>
+    body {
+        margin: 0;
+        font-family: Arial;
+    }
+
+    .container {
+        display: flex;
+        height: 100vh;
+    }
+
+    /* Left Menu */
+    .menu {
+        width: 25%;
+        background: #2c3e50;
+        color: white;
+        padding: 20px;
+    }
+
+    .menu h2 {
+        text-align: center;
+    }
+
+    .menu a {
+        display: block;
+        color: white;
+        text-decoration: none;
+        padding: 10px;
+        margin: 10px 0;
+        background: #34495e;
+        border-radius: 5px;
+        text-align: center;
+    }
+
+    .menu a:hover {
+        background: #1abc9c;
+    }
+
+    /* Right Content */
+    .content {
+        width: 75%;
+    }
+
+    iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+    }
+</style>
+
+<script>
+    function loadPage(page) {
+        document.getElementById("frame").src = page;
+    }
+</script>
+
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Left Menu -->
+    <div class="menu">
+        <h2>Menu</h2>
+
+        <a href="#" onclick="loadPage('home')">Home</a>
+        <a href="#" onclick="loadPage('map')">View Map</a>
+        <a href="#" onclick="loadPage('https://www.wikipedia.org')">Wikipedia</a>
+
+    </div>
+
+    <!-- Right Frame -->
+    <div class="content">
+        <iframe id="frame" srcdoc="
+            <h2 style='text-align:center;'>Welcome</h2>
+            <p style='text-align:center;'>This is Home Page</p>
+        "></iframe>
+    </div>
+
+</div>
+
+<script>
+    function loadPage(page) {
+        let frame = document.getElementById('frame');
+
+        if(page === 'home') {
+            frame.srcdoc = `
+                <h2 style='text-align:center;'>Welcome</h2>
+                <p style='text-align:center;'>This is Home Page</p>
+            `;
+        }
+
+        else if(page === 'map') {
+            frame.src = 'https://www.google.com/maps?q=Nasik&output=embed';
+        }
+
+        else {
+            frame.src = page;
+        }
+    }
+</script>
+
+</body>
+</html>
